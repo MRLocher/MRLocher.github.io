@@ -18,6 +18,9 @@ let beta;
 let gamma;
 let textureImg;
 let motion = false;
+let rvx;
+let rvy;
+let rvz;
 let ff;
 let ff2;
 let ff3;
@@ -45,23 +48,21 @@ function setup() {
  
   createCanvas(windowWidth, windowHeight, WEBGL); 
 
-VelCsli=createSlider(1,30,3,1); 
-  VelCsli.position(10,50);
   ff = createP();
   ff.position(10,10);
-  
-  betaxsli=createSlider(-1,1,0,0.01); 
-  betaxsli.position(85,70);
+
+  rvx = createInput(0,'double');
+  rvx.position(85, 70);
   ff2 = createP();
   ff2.position(10,50);
-  
-  betaysli=createSlider(-1,1,0,0.01); 
-  betaysli.position(85,95);
+
+  rvy = createInput(0,'double');
+  rvy.position(85, 95);
   ff3 = createP();
   ff3.position(10,75);
-  
-  betazsli=createSlider(-1,1,0,0.01); 
-  betazsli.position(85,120);
+
+  rvz = createInput(0,'double');
+  rvz.position(85, 120);
   ff4 = createP();
   ff4.position(10,100);
   
@@ -71,7 +72,7 @@ VelCsli=createSlider(1,30,3,1);
   //geolocation
  
   
- perspective(9*PI/180, width/height, 0.001,50000);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0,50000);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
@@ -81,9 +82,9 @@ function draw() {
   background(200); 
  angleMode(DEGREES);
   VelC=VelCsli.value();
-  betax=betaxsli.value();
-  betay=betaysli.value();
-  betaz=betazsli.value();
+  betax=rvx.value();
+  betay=rvy.value();
+  betaz=rvz.value();
 
   angleMode(RADIANS);
   velcanx=betax*VelC;
@@ -119,7 +120,7 @@ resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
-  ff.html(`c:${VelC}m/s V1.06`);
+  ff.html(`c:${VelC}m/s V1.08`);
   ff2.html(`Vx/c:${betax}`);
   ff3.html(`Vy/c:${betay}`);
   ff4.html(`Vz/c:${betaz}`);
