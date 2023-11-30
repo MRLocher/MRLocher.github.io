@@ -120,11 +120,10 @@ resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
-  ff.html(`c:${VelC}m/s`);
+  ff.html(`c:${VelC}m/s V1.00`);
   ff2.html(`Vx/c:${betax}`);
   ff3.html(`Vy/c:${betay}`);
   ff4.html(`Vz/c:${betaz}`);
- text('Version: 1.00', 370, 80);
 }
 
 
