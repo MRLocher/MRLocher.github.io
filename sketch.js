@@ -124,7 +124,7 @@ console.log(theta,phi);
   ff2.html(`Vx/c:${betax}`);
   ff3.html(`Vy/c:${betay}`);
   ff4.html(`Vz/c:${betaz}`);
- text('Version: 1.00'+ , 370, 80);
+ text('Version: 1.00', 370, 80);
 }
 
 
