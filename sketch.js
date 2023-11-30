@@ -50,21 +50,27 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-
-  rvx = createInput(0,'double');
+  ff.html(`c:${VelC}m/s V1.08`);
+ 
+  rvx = createInput(0.0,'double');
   rvx.position(85, 70);
   ff2 = createP();
   ff2.position(10,50);
-
-  rvy = createInput(0,'double');
+  ff2.html(`Vx/c:${betax}`);
+ 
+  rvy = createInput(0.0,'double');
   rvy.position(85, 95);
   ff3 = createP();
   ff3.position(10,75);
-
-  rvz = createInput(0,'double');
+  ff3.html(`Vy/c:${betay}`);
+ 
+  rvz = createInput(0.0,'double');
   rvz.position(85, 120);
   ff4 = createP();
   ff4.position(10,100);
+  ff4.html(`Vz/c:${betaz}`);
+ 
+
   
       
     camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
@@ -81,7 +87,7 @@ function setup() {
 function draw() {
   background(200); 
  angleMode(DEGREES);
-  VelC=VelCsli.value();
+  VelC=3;//VelCsli.value();
   betax=rvx.value();
   betay=rvy.value();
   betaz=rvz.value();
@@ -120,10 +126,6 @@ resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
-  ff.html(`c:${VelC}m/s V1.08`);
-  ff2.html(`Vx/c:${betax}`);
-  ff3.html(`Vy/c:${betay}`);
-  ff4.html(`Vz/c:${betaz}`);
 }
 
 
