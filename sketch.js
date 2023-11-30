@@ -71,7 +71,7 @@ VelCsli=createSlider(1,30,3,1);
   //geolocation
  
   
- perspective(2*PI/180, width/height, 0,500);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0.001,50000);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
@@ -119,7 +119,7 @@ resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
-  ff.html(`c:${VelC}m/s V1.04`);
+  ff.html(`c:${VelC}m/s V1.06`);
   ff2.html(`Vx/c:${betax}`);
   ff3.html(`Vy/c:${betay}`);
   ff4.html(`Vz/c:${betaz}`);
