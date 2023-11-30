@@ -67,7 +67,7 @@ VelCsli=createSlider(1,30,3,1);
   
       
     camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
-    //frustum(-windowWidth / 20, windowWidth / 20, windowHeight / 20, -windowHeight / 20, 100, 1000)
+    //frustum(-width / 20, width / 20, height / 20, -height / 20, 100, 1000)
     noStroke();
   //geolocation
  
@@ -124,6 +124,7 @@ console.log(theta,phi);
   ff2.html(`Vx/c:${betax}`);
   ff3.html(`Vy/c:${betay}`);
   ff4.html(`Vz/c:${betaz}`);
+ text('Version: 1.00'+ , windowWidth-windowWidth/100, 80);
 }
 
 
