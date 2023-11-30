@@ -67,7 +67,7 @@ VelCsli=createSlider(1,30,3,1);
   
       
     camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
-    frustum(-windowWidth / 20, windowWidth / 20, windowHeight / 20, -windowHeight / 20, 100, 1000)
+    //frustum(-windowWidth / 20, windowWidth / 20, windowHeight / 20, -windowHeight / 20, 100, 1000)
     noStroke();
   //geolocation
  
