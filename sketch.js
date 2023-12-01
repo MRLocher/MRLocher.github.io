@@ -50,25 +50,25 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`c:${VelC}m/s V1.08`);
+  ff.html(`V1.08`);
  
   rvx = createInput(0.0,'double');
   rvx.position(85, 70);
   ff2 = createP();
   ff2.position(10,50);
-  ff2.html(`Vx/c:${betax}`);
+  ff2.html(`Vx/c:`);
  
   rvy = createInput(0.0,'double');
   rvy.position(85, 95);
   ff3 = createP();
   ff3.position(10,75);
-  ff3.html(`Vy/c:${betay}`);
+  ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
   rvz.position(85, 120);
   ff4 = createP();
   ff4.position(10,100);
-  ff4.html(`Vz/c:${betaz}`);
+  ff4.html(`Vz/c:`);
  
 
   
