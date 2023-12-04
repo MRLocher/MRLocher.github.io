@@ -2,7 +2,7 @@ let theShader;
 let speedtest=1.5;
 let headingtest=50;
 let PHI1=0;
-let THETA1=180;
+let THETA1=0;//180;
 let cam;
 let VelC;
 let betax;
