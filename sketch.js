@@ -47,7 +47,7 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`V1.08`);
+  ff.html(`V1.10`);
  
   rvx = createInput(0.0,'double');
   rvx.position(85, 70);
@@ -75,7 +75,7 @@ function setup() {
   //geolocation
  
   
- perspective(9*PI/180, width/height, 0,50000);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0.001,50000);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
