@@ -116,7 +116,7 @@ function draw() {
   rotateX(-theta);
   rotateY(-phi);
  theShader.setUniform('uTex', cam);
-//resetShader();
+resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
