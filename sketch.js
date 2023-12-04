@@ -1,7 +1,4 @@
 let theShader;
-let velcanx=0;
-let velcany=0;
-let velcanz=0;
 let speedtest=1.5;
 let headingtest=50;
 let PHI1=0;
@@ -87,23 +84,19 @@ function setup() {
 function draw() {
   background(200); 
  angleMode(DEGREES);
-  VelC=3;//VelCsli.value();
   betax=rvx.value();
   betay=rvy.value();
   betaz=rvz.value();
 
   angleMode(RADIANS);
-  velcanx=betax*VelC;
-  velcany=betay*VelC;
-  velcanz=betaz*VelC;
   //transform to theta and phi
-  let r=sqrt(velcanx*velcanx+velcany*velcany+velcanz*velcanz);
+  let r=sqrt(betax*betax+betay*betay+betaz*betaz);
   if (r===0){
     THETA1=0
     PH1=0;
   }else{
-    THETA1=asin(-velcany/r);
-   PHI1=PI+atan2(-velcanx,-velcanz);
+    THETA1=asin(-betay/r);
+   PHI1=PI+atan2(-betax,-betaz);
   }
     
   
@@ -111,7 +104,8 @@ function draw() {
   theta=THETA1; 
   phi=PHI1;     
   
-  beta=sqrt(velcanx*velcanx+velcany*velcany+velcanz*velcanz)/VelC;
+  beta=sqrt(betax*betax+betay*betay+betaz*betaz);
+ // if (beta >=1 ){} TOTO should we check this or not?
   gamma=1/Math.sqrt(1-beta*beta);
   
 // distorted lookalike sphere
