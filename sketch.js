@@ -47,7 +47,7 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`V1.10`);
+  ff.html(`V1.11`);
  
   rvx = createInput(0.0,'double');
   rvx.position(85, 70);
@@ -116,7 +116,7 @@ function draw() {
   rotateX(-theta);
   rotateY(-phi);
  theShader.setUniform('uTex', cam);
-resetShader();
+//resetShader();
   shader(theShader);
   sphere(200,100);
 console.log(theta,phi);
