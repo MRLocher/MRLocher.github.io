@@ -48,7 +48,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.2`);
+  ff.html(`V1.21`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
@@ -121,6 +121,7 @@ function draw() {
   gamma=1/Math.sqrt(1-beta*beta);
   
 // distorted lookalike sphere
+  sphere(radius,200);
   rotateY(phi);
   rotateX(theta);
   scale(1/gamma, 1/gamma, 1);
@@ -130,7 +131,7 @@ function draw() {
  theShader.setUniform('uTex', cam);
 resetShader();
   shader(theShader);
-  sphere(radius,200);
+  //sphere(radius,200);
 console.log(theta,phi);
 }
 
