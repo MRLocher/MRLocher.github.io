@@ -10,7 +10,7 @@ let betay;
 let betaz;
 let phi=0;
 let theta=0;
-let radius=100;//200;
+let radius=1;//200;
 let beta;
 let gamma;
 let textureImg;
@@ -48,7 +48,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.21`);
+  ff.html(`V1.22`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
@@ -108,7 +108,7 @@ function draw() {
   theta=THETA1; 
   phi=PHI1;     
   
- let beta2=betax*betax+betay*betay+betaz*betaz;
+ let beta2 = rvx.value()*rvx.value()+rvy.value()*rvy.value()+rvz.value()*rvz.value();
  
  if (beta2 >=1 ){
   const contentString = "Beta is >= 1! normalising it to 0.99";
@@ -121,17 +121,16 @@ function draw() {
   gamma=1/Math.sqrt(1-beta*beta);
   
 // distorted lookalike sphere
-  sphere(radius,200);
   rotateY(phi);
   rotateX(theta);
   scale(1/gamma, 1/gamma, 1);
   translate(0,0,radius*beta);
   rotateX(-theta);
   rotateY(-phi);
- theShader.setUniform('uTex', cam);
-resetShader();
+  theShader.setUniform('uTex', cam);
+  resetShader();
   shader(theShader);
-  //sphere(radius,200);
+  sphere(radius,200);
 console.log(theta,phi);
 }
 
