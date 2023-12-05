@@ -47,8 +47,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL); 
 
   ff = createP();
-  ff.position(10,10);
-  ff.html(`V1.15`);
+  ff.position(0,0);
+  ff.html(`V1.16`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 70);
@@ -79,7 +79,7 @@ function setup() {
   //geolocation
  
   
- perspective(9*PI/180, width/height, 0.001,50000);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0.001,500);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
