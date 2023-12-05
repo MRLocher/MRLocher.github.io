@@ -10,7 +10,7 @@ let betay;
 let betaz;
 let phi=0;
 let theta=0;
-let radius=1;//200;
+let radius=100;//200;
 let beta;
 let gamma;
 let textureImg;
