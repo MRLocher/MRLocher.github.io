@@ -51,21 +51,21 @@ function setup() {
   ff.html(`V1.12`);
 
   rvx = createInput(0.0,'double');
-  rvx.position(85, 40);
+  rvx.position(70, 75);
   ff2 = createP();
-  ff2.position(10,40);
+  ff2.position(10,50);
   ff2.html(`Vx/c:`);
  
   rvy = createInput(0.0,'double');
-  rvy.position(85, 65);
+  rvy.position(70, 95);
   ff3 = createP();
-  ff3.position(10,65);
+  ff3.position(10,75);
   ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
-  rvz.position(85, 90);
+  rvz.position(70, 120);
   ff4 = createP();
-  ff4.position(10,90);
+  ff4.position(10,100);
   ff4.html(`Vz/c:`);
 
   errorText = createP();
