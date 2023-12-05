@@ -48,7 +48,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.18`);
+  ff.html(`V1.19`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
@@ -86,7 +86,7 @@ function setup() {
 }
 
 function draw() {
-  background(200); 
+  //background(200); 
  angleMode(DEGREES);
   betax=rvx.value();
   betay=rvy.value();
@@ -111,7 +111,7 @@ function draw() {
  let beta2=betax*betax+betay*betay+betaz*betaz;
  
  if (beta2 >=1 ){
-  const contentString = "Beta is larger than 1! normalising it to 0.99";
+  const contentString = "Beta is >= 1! normalising it to 0.99";
   errorText.html(contentString.fontcolor("red")); 
   
   beta = 0.99; 
