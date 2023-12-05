@@ -48,22 +48,22 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.16`);
+  ff.html(`V1.17`);
 
   rvx = createInput(0.0,'double');
-  rvx.position(50, 70);
+  rvx.position(50, 67);
   ff2 = createP();
   ff2.position(10,50);
   ff2.html(`Vx/c:`);
  
   rvy = createInput(0.0,'double');
-  rvy.position(50, 95);
+  rvy.position(50, 90);
   ff3 = createP();
   ff3.position(10,75);
   ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
-  rvz.position(50, 130);
+  rvz.position(50, 120);
   ff4 = createP();
   ff4.position(10,100);
   ff4.html(`Vz/c:`);
@@ -79,7 +79,7 @@ function setup() {
   //geolocation
  
   
- perspective(9*PI/180, width/height, 0.001,500);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0.001,5000);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
@@ -108,7 +108,7 @@ function draw() {
   theta=THETA1; 
   phi=PHI1;     
   
- let beta2=sqrt(betax*betax+betay*betay+betaz*betaz);
+ let beta2=betax*betax+betay*betay+betaz*betaz;
  
  if (beta2 >=1 ){
   const contentString = "Beta is larger than 1! normalising it to 0.99";
