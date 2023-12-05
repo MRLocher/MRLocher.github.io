@@ -112,10 +112,10 @@ function draw() {
  
  if (beta2 >=1 ){
   const contentString = "Beta is larger than 1! normalising it to 0.99";
-  document.body.innerHTML = contentString.fontcolor("red");
+  contentString.fontcolor("red");
   errorText.html(contentString); 
   
-  beta = 0.5; 
+  beta = 0.99; 
  } else{
   beta=sqrt(beta2);
  }
