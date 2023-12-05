@@ -48,7 +48,7 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`V1.11`);
+  ff.html(`V1.12`);
 
   rvx = createInput(0.0,'double');
   rvx.position(85, 40);
@@ -69,7 +69,7 @@ function setup() {
   ff4.html(`Vz/c:`);
 
   errorText = createP();
-  errorText.position(100,10);
+  errorText.position(200,10);
 
 
   
@@ -108,13 +108,17 @@ function draw() {
   theta=THETA1; 
   phi=PHI1;     
   
-  beta=sqrt(betax*betax+betay*betay+betaz*betaz);
- if (beta >=1 ){
-  const contentString = "Beta is larger than 1! normalising it to 0.999";
-  document.body.innerHTML = contentString.fontcolor("red");
+ let beta2=sqrt(betax*betax+betay*betay+betaz*betaz);
  
+ if (beta2 >=1 ){
+  const contentString = "Beta is larger than 1! normalising it to 0.99";
+  document.body.innerHTML = contentString.fontcolor("red");
   errorText.html(contentString); 
- } //TOTO should we check this or not?
+  
+  beta = 0.99; 
+ } else{
+  beta=sqrt(beta2);
+ }
   gamma=1/Math.sqrt(1-beta*beta);
   
 // distorted lookalike sphere
