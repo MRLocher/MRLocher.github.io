@@ -48,28 +48,28 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`V1.14`);
+  ff.html(`V1.15`);
 
   rvx = createInput(0.0,'double');
-  rvx.position(70, 75);
+  rvx.position(50, 65);
   ff2 = createP();
   ff2.position(10,50);
   ff2.html(`Vx/c:`);
  
   rvy = createInput(0.0,'double');
-  rvy.position(70, 95);
+  rvy.position(50, 85);
   ff3 = createP();
   ff3.position(10,75);
   ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
-  rvz.position(70, 120);
+  rvz.position(50, 110);
   ff4 = createP();
   ff4.position(10,100);
   ff4.html(`Vz/c:`);
 
   errorText = createP();
-  errorText.position(200,10);
+  errorText.position(400,30);
 
 
   
@@ -112,8 +112,7 @@ function draw() {
  
  if (beta2 >=1 ){
   const contentString = "Beta is larger than 1! normalising it to 0.99";
-  contentString.fontcolor("red");
-  errorText.html(contentString); 
+  errorText.html(contentString.fontcolor("red")); 
   
   beta = 0.99; 
  } else{
