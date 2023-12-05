@@ -51,19 +51,19 @@ function setup() {
   ff.html(`V1.15`);
 
   rvx = createInput(0.0,'double');
-  rvx.position(50, 65);
+  rvx.position(50, 70);
   ff2 = createP();
   ff2.position(10,50);
   ff2.html(`Vx/c:`);
  
   rvy = createInput(0.0,'double');
-  rvy.position(50, 85);
+  rvy.position(50, 95);
   ff3 = createP();
   ff3.position(10,75);
   ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
-  rvz.position(50, 110);
+  rvz.position(50, 130);
   ff4 = createP();
   ff4.position(10,100);
   ff4.html(`Vz/c:`);
@@ -86,7 +86,7 @@ function setup() {
 }
 
 function draw() {
-  background(200000); 
+  background(200); 
  angleMode(DEGREES);
   betax=rvx.value();
   betay=rvy.value();
