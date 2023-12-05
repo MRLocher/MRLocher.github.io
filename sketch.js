@@ -48,7 +48,7 @@ function setup() {
 
   ff = createP();
   ff.position(10,10);
-  ff.html(`V1.12`);
+  ff.html(`V1.14`);
 
   rvx = createInput(0.0,'double');
   rvx.position(70, 75);
@@ -115,7 +115,7 @@ function draw() {
   document.body.innerHTML = contentString.fontcolor("red");
   errorText.html(contentString); 
   
-  beta = 0.99; 
+  beta = 0.5; 
  } else{
   beta=sqrt(beta2);
  }
