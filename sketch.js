@@ -31,8 +31,10 @@ function preload() {
     facingMode: {
       exact: "environment"
     },
-    width: { exact: 1280 },
-    height: { exact: 720 }
+    // width: { exact: 1280 },
+    // height: { exact: 720 }
+    height: { exact: 1280 },
+    width: { exact: 720 }
   }
 };
   cam = createCapture(constraints, (stream) => {
@@ -48,7 +50,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.22`);
+  ff.html(`V1.23`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
