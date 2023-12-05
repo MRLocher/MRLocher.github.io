@@ -10,7 +10,7 @@ let betay;
 let betaz;
 let phi=0;
 let theta=0;
-let radius=1;//200;
+let radius=10;//200;
 let beta;
 let gamma;
 let textureImg;
@@ -50,7 +50,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.23`);
+  ff.html(`V1.24`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
