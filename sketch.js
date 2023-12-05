@@ -10,7 +10,7 @@ let betay;
 let betaz;
 let phi=0;
 let theta=0;
-let radius=200;
+let radius=1;//200;
 let beta;
 let gamma;
 let textureImg;
@@ -63,7 +63,7 @@ function setup() {
   ff3.html(`Vy/c:`);
  
   rvz = createInput(0.0,'double');
-  rvz.position(50, 120);
+  rvz.position(50, 116);
   ff4 = createP();
   ff4.position(10,100);
   ff4.html(`Vz/c:`);
@@ -79,7 +79,7 @@ function setup() {
   //geolocation
  
   
- perspective(9*PI/180, width/height, 0.001,5000);//perspective(40*PI/180, width/height, 0.001,500);
+ perspective(9*PI/180, width/height, 0.0001,50000);//perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
