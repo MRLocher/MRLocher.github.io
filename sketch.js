@@ -97,7 +97,7 @@ function draw() {
   angleMode(RADIANS);
   //transform to theta and phi
   let r=sqrt(betax*betax+betay*betay+betaz*betaz);
-  if (r===0){
+  if (r==0){
     THETA1=0
     PH1=0;
   }else{
