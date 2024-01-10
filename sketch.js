@@ -81,7 +81,8 @@ function setup() {
   //geolocation
  
   
- perspective(40*PI/180, width/height, 0.0001,50000);//perspective(40*PI/180, width/height, 0.001,500);
+ //perspective(9*PI/180, width/height, 0.0001,50000);
+ perspective(40*PI/180, width/height, 0.001,500);
   //device orientation
  
  
