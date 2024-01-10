@@ -1,7 +1,7 @@
 precision highp float;
 
 #define PI 3.14159265358979323846
-float nine = 4.5;
+float nine = 9;
 varying vec2 vTexCoord;
 uniform sampler2D uTex;
 
