@@ -192,13 +192,17 @@ function setup() {
   baseAccX = 0;
   baseAccY = 0;
   baseAccZ = 0;
-      let constraints = {
-      video: {
-      facingMode: {
-           exact: "environment"
-          }
-       }
-      };
+  let constraints = {
+  video: {
+    facingMode: {
+      exact: "environment"
+    },
+    width: { exact: 1280 },
+    height: { exact: 720 }
+    // height: { exact: 1280 },
+    // width: { exact: 720 }
+  }
+};
  
    cam = createCapture(constraints);
  
