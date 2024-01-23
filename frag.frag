@@ -9,6 +9,7 @@ void main() {
   float longitude = mix(-PI, PI, vTexCoord.x);
   float latitude = mix(-PI/2.0, PI/2.0, vTexCoord.y);
   float Yboard=atan(tan(PI/nine)*cos(longitude));
+  Yboard = (16.0*PI/(nine*nine));
   
 if ((longitude >= -16.0*PI/(nine*nine)) && (longitude <= 16.0*PI/(nine*nine))&& (latitude <= Yboard)&& (latitude >= -Yboard)) {
 
@@ -21,8 +22,5 @@ if ((longitude >= -16.0*PI/(nine*nine)) && (longitude <= 16.0*PI/(nine*nine))&& 
 } else{
   gl_FragColor = vec4(1.0);
 }
-
-gl_FragColor = texture2D(uTex, vTexCoord);
-
  
 }
