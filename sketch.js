@@ -50,7 +50,7 @@ function setup() {
 
   ff = createP();
   ff.position(0,0);
-  ff.html(`V1.28`);
+  ff.html(`V1.29`);
 
   rvx = createInput(0.0,'double');
   rvx.position(50, 67);
