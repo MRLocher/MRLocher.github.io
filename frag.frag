@@ -14,8 +14,8 @@ if ((longitude >= -16.0*PI/(nine*nine)) && (longitude <= 16.0*PI/(nine*nine))&& 
 
   float transfactlong=(longitude+(16.0*PI/(nine*nine)))/(32.0*PI/(nine*nine));
   float transfactlat=(latitude+Yboard)/(2.0*Yboard);
-  float aflong=mix(0.0,1.0,transfactlong);
-  float aflat=mix(0.0,1.0,transfactlat);
+  float aflong=mix(0.0,1.0,longitude);
+  float aflat=mix(0.0,1.0,latitude);
   vec2 transjingwei=vec2(1.0-aflong,aflat);
   gl_FragColor = texture2D(uTex, transjingwei);
 } else{
