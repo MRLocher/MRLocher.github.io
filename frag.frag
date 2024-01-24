@@ -8,7 +8,7 @@ uniform sampler2D uTex;
 void main() {
   float longitude = mix(-PI, PI, vTexCoord.x);
   float latitude = mix(-PI/2.0, PI/2.0, vTexCoord.y);
-  float Yboard=atan(tan(PI/9.0)*cos(longitude));
+  float Yboard=PI/9.0;
   
 if ((longitude >= -16.0*PI/81.0) && (longitude <= 16.0*PI/81.0)&& (latitude <= Yboard)&& (latitude >= -Yboard)) {
 
